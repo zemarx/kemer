@@ -7,7 +7,7 @@ const Hello = React.createClass({
     render: function () {
         return (
             <div id="main">
-                <div style={navStyle}>Mybe navigation?</div>
+                <div style={navStyle}>Mybe navigation!</div>
                 <div>Maybe some info</div>
             </div>
         );
