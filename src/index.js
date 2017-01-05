@@ -9,7 +9,7 @@ const Hello = React.createClass({
             <div id="main">
                 <nav>Mybe navigation?</nav>
                 <div>Maybe some info</div>
-                <div>Marghihiihhihi</div>
+                <div>Donkey</div>
             </div>
         );
     }
