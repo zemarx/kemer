@@ -1,14 +1,14 @@
-const React = require('react');
+import {Component} from 'react'
 
 
-const AboutComponent = React.createClass({
-    render: function () {
+class AboutComponent extends Component {
+    render () {
         return (
             <div>
                 About
             </div>
         );
     }
-});
+}
 
 export default AboutComponent;
