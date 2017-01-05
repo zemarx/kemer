@@ -1,14 +1,14 @@
 const React = require('react');
 
 
-const TestComponent = React.createClass({
+const DrinksComponent = React.createClass({
     render: function () {
         return (
             <div>
-                Test
+                Juomat
             </div>
         );
     }
 });
 
-export default TestComponent;
+export default DrinksComponent;

@@ -173,7 +173,7 @@
 	// shim for using process in browser
 	var process = module.exports = {};
 
-	// cached from whatever global is present so that test runners that stub it
+	// cached from whatever global is present so that drinks runners that stub it
 	// don't break things.  But we need to wrap it in a try catch in case it is
 	// wrapped in strict mode code which doesn't define any globals.  It's inside a
 	// function because try/catches deoptimize in certain engines.
@@ -953,7 +953,7 @@
 	/**
 	 * Factory method to create a new React element. This no longer adheres to
 	 * the class pattern, so do not use new to call it. Also, no instanceof check
-	 * will work. Instead test $$typeof field against Symbol.for('react.element') to check
+	 * will work. Instead drinks $$typeof field against Symbol.for('react.element') to check
 	 * if something is a React Element.
 	 *
 	 * @param {*} type
@@ -994,7 +994,7 @@
 
 	    // To make comparing ReactElements easier for testing purposes, we make
 	    // the validation flag non-enumerable (where possible, which should
-	    // include every environment we run tests in), so the test framework
+	    // include every environment we run tests in), so the drinks framework
 	    // ignores it.
 	    if (canDefineProperty) {
 	      Object.defineProperty(element._store, 'validated', {
@@ -1858,7 +1858,7 @@
 
 	  /**
 	   * Checks whether or not this composite component is mounted.
-	   * @param {ReactClass} publicInstance The instance we want to test.
+	   * @param {ReactClass} publicInstance The instance we want to drinks.
 	   * @return {boolean} True if mounted, false otherwise.
 	   * @protected
 	   * @final
@@ -8976,7 +8976,7 @@
 	  }
 
 	  if (!isSupported && useHasFeature && eventNameSuffix === 'wheel') {
-	    // This is the only way to test support for the `wheel` event in IE9+.
+	    // This is the only way to drinks support for the `wheel` event in IE9+.
 	    isSupported = document.implementation.hasFeature('Events.wheel', '3.0');
 	  }
 
@@ -10542,7 +10542,7 @@
 	}
 
 	/**
-	 * Perform a heuristic test to determine if an object is "array-like".
+	 * Perform a heuristic drinks to determine if an object is "array-like".
 	 *
 	 *   A monk asked Joshu, a Zen master, "Has a dog Buddha nature?"
 	 *   Joshu replied: "Mu."
@@ -10804,7 +10804,7 @@
 	var listenTo = ReactBrowserEventEmitter.listenTo;
 	var registrationNameModules = EventPluginRegistry.registrationNameModules;
 
-	// For quickly matching children type, to test if can be treated as content.
+	// For quickly matching children type, to drinks if can be treated as content.
 	var CONTENT_TYPES = { 'string': true, 'number': true };
 
 	var STYLE = 'style';
@@ -11801,7 +11801,7 @@
 	function focusNode(node) {
 	  // IE8 can throw "Can't move focus to the control because it is invisible,
 	  // not enabled, or of a type that does not accept the focus." for all kinds of
-	  // reasons that are too expensive and fragile to test.
+	  // reasons that are too expensive and fragile to drinks.
 	  try {
 	    node.focus();
 	  } catch (e) {}
@@ -16833,7 +16833,7 @@
 
 	  /**
 	   * Checks whether or not this composite component is mounted.
-	   * @param {ReactClass} publicInstance The instance we want to test.
+	   * @param {ReactClass} publicInstance The instance we want to drinks.
 	   * @return {boolean} True if mounted, false otherwise.
 	   * @protected
 	   * @final
@@ -17001,7 +17001,7 @@
 
 	  /**
 	   * Checks whether or not this composite component is mounted.
-	   * @param {ReactClass} publicInstance The instance we want to test.
+	   * @param {ReactClass} publicInstance The instance we want to drinks.
 	   * @return {boolean} True if mounted, false otherwise.
 	   * @protected
 	   * @final
