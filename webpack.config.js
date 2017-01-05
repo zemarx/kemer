@@ -3,7 +3,10 @@ var path = require('path');
 
 
 module.exports = {
-    entry: './src/index.js',
+    entry: [
+        'webpack/hot/dev-server',
+        './src/index.js'
+    ],
     output: {
         path: path.join(__dirname, 'app'),
         filename: 'app-bundle.js'
@@ -12,7 +15,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
+                loaders: ['react-hot','babel-loader'],
                 exclude: [/node_modules/]
             },
             {

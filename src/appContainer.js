@@ -10,7 +10,7 @@ import SaladsComponent from './components/salads/salads.component'
 const ROUTES = {
     path: '/',
     component: App,
-    indexRoute: { component: App },
+    indexRoute: { component: PizzasComponent },
     childRoutes: [
         { path: 'about', component: AboutComponent },
         { path: 'pizzas', component: PizzasComponent },
