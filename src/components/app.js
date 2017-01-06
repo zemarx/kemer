@@ -5,18 +5,21 @@ import {Link as ReactRouterLink} from 'react-router'
 const Link = Radium(ReactRouterLink);
 
 const styles = {
+
     nav: {
-        width: '100%',
+        width: '70%',
         height: '100px',
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        margin: 'auto',
+        marginTop: '60px'
     },
     link: {
         width: '100%',
         padding: '35px',
         textDecoration: 'none',
         textAlign: 'center',
-        fontSize: '30px',
+        fontSize: '25px',
         color: '#FFFFFF',
         backgroundColor: '#808080',
 
