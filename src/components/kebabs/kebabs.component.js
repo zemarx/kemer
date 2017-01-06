@@ -1,6 +1,10 @@
-import React, {Component} from 'react'
+import * as React from 'react'
 
-class KebabsComponent extends Component {
+class KebabsComponent extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
     render () {
         return (
             <div>

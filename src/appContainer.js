@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import { Router, Route, hashHistory } from 'react-router'
+import * as React from 'react'
+import { Router, hashHistory } from 'react-router'
 import App from './components/app'
 import AboutComponent from './components/about/about.component'
 import DrinksComponent from './components/drinks/drinks.component'
@@ -20,7 +20,11 @@ const ROUTES = {
     ]
 };
 
-class AppContainer extends Component {
+class AppContainer extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
     render () {
         return (
             <Router history={hashHistory} routes={ROUTES}></Router>

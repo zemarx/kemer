@@ -1,13 +1,11 @@
-import React, {Component} from 'react'
-import ReactDOM, {render} from 'react-dom'
-
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import AppContainer from './appContainer'
 
-var rootElement = document.getElementById('app');
+const rootElement = document.getElementById('app');
 
 
 ReactDOM.render(<AppContainer />, rootElement);
-
 
 if (module.hot) {
     module.hot.accept('./appContainer', function () {

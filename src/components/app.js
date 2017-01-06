@@ -1,7 +1,11 @@
-import React, {Component} from 'react'
+import * as React from 'react'
 import {Link} from 'react-router'
 
-class App extends Component {
+class App extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
     render () {
         return (
             <div id="navigation">

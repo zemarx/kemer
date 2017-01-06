@@ -1,14 +1,17 @@
-const React = require('react');
+import * as React from 'react'
 
+class DrinksComponent extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-const DrinksComponent = React.createClass({
-    render: function () {
+    render () {
         return (
             <div>
                 Juomat
             </div>
         );
     }
-});
+}
 
 export default DrinksComponent;

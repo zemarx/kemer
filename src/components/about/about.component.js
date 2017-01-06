@@ -1,6 +1,10 @@
-import React, {Component} from 'react'
+import * as React from 'react'
 
-class AboutComponent extends Component {
+class AboutComponent extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
     render () {
         return (
             <div>
