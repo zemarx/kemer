@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Router, hashHistory } from 'react-router'
 import App from './components/app'
+import HomeComponent from './components/home/home.component'
 import AboutComponent from './components/about/about.component'
 import DrinksComponent from './components/drinks/drinks.component'
 import PizzasComponent from './components/pizzas/pizzas.component'
@@ -10,7 +11,7 @@ import SaladsComponent from './components/salads/salads.component'
 const ROUTES = {
     path: '/',
     component: App,
-    indexRoute: { component: PizzasComponent },
+    indexRoute: { component: HomeComponent },
     childRoutes: [
         { path: 'about', component: AboutComponent },
         { path: 'pizzas', component: PizzasComponent },
