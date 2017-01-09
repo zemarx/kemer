@@ -1,5 +1,5 @@
-const db = {
-  pizzas: [
+
+  export const pizzas = [
     {
       "id": "1",
       "name": "SWEET CHICKEN",
@@ -246,42 +246,89 @@ const db = {
       "price_norm": 7.50,
       "price_big": 15.00
     }
-  ],
+  ];
 
-  kebabs: [
+  export const kebabs = [
     {
       "id": "",
       "name": "",
       "ingredients": "",
       "price": ""
     }
-  ],
+  ];
 
-  rolls: [
+  export const rolls = [
     {
       "id": "",
       "name": "",
       "ingredients": "",
       "price": ""
     }
-  ],
+  ];
 
-  drinks: [
+  export const drinks = [
     {
       "id": "",
       "name": "",
       "size": "",
       "price": ""
     }
-  ],
+  ];
 
-  favoritePizzas: [
-      {
-          id: ""
-      },
-      {
-          id: ""
-      }
-  ]
-};
+  export let favorites = {
+      pizzas: [
+          {
+              "id": "1",
+              "name": "SWEET CHICKEN",
+              "ingredients": [
+                  "kana",
+                  "ananas",
+                  "majoneesi"
+              ],
+              "price_norm": 7.00,
+              "price_big": 14.00,
+              "pic": "abs/path/to/pic"
+          },
+          {
+              "id": "2",
+              "name": "ARTISTA",
+              "ingredients": [
+                  "kinkku",
+                  "katkarapu"
+              ],
+              "price_norm": 6.50,
+              "price_big": 13.00
+          }
+      ],
+
+      kebabs: [
+          {
+              "id": "",
+              "name": "omomomom",
+              "ingredients": "",
+              "price": ""
+          },
+          {
+              "id": "",
+              "name": "miika",
+              "ingredients": "",
+              "price": ""
+          }
+      ],
+
+      rolls: [
+          {
+              "id": "1",
+              "name": "yeee",
+              "ingredients": "",
+              "price": ""
+          },
+          {
+              "id": "",
+              "name": "wuhuuu",
+              "ingredients": "",
+              "price": ""
+          }
+      ]
+  };
 
