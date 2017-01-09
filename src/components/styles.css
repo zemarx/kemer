@@ -1,0 +1,23 @@
+
+.nav {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 60px;
+}
+.link {
+    width: 100%;
+    padding: 35px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    color: #FFFFFF;
+    background-color: #808080;
+}
+
+.link:hover {
+            color: red;
+        }
+
