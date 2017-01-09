@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {favorites} from '../../data/database'
+import {favorites} from '../../data/database.js'
 
 class Favorite extends React.Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class Favorite extends React.Component {
                 {
                     this.state.dishes.map(function(dish) {
                         return (
-                            <div key={dish.id}>Name: {dish.name} {dish.ingredients} {dish.price_norm}</div>
+                            <div key={dish.id}> {dish.name} : {dish.ingredients} {dish.price_norm} / {dish.price_big}</div>
                         )
                     })
                 }
@@ -34,6 +34,7 @@ class HomeComponent extends React.Component {
         return (
             <div>
                 <Favorite dishes={favorites.pizzas}/>
+                <Favorite dishes={favorites.kebabs}/>
                 <Favorite dishes={favorites.rolls}/>
             </div>
         );
