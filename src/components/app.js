@@ -11,12 +11,12 @@ class App extends React.Component {
     render () {
         return (
             <div>
-                <nav styleName={styles.nav}>
-                    <Link styleName={styles.link} to={'/pizzas'}>Pizzat</Link>
-                    <Link styleName={styles.link} to={'/kebabs'}>Kebabit</Link>
-                    <Link styleName={styles.link} to={'/salads'}>Salaatit</Link>
-                    <Link styleName={styles.link} to={'/drinks'}>Juomat</Link>
-                    <Link styleName={styles.link} to={'/about'}>Yhteystiedot</Link>
+                <nav className={styles.nav}>
+                    <Link className={styles.link} to={'/pizzas'}>Pizzat</Link>
+                    <Link className={styles.link} to={'/kebabs'}>Kebabit</Link>
+                    <Link className={styles.link} to={'/salads'}>Salaatit</Link>
+                    <Link className={styles.link} to={'/drinks'}>Juomat</Link>
+                    <Link className={styles.link} to={'/about'}>Yhteystiedot</Link>
                 </nav>
                 {this.props.children}
             </div>
