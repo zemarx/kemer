@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    /*background-image: url('../images/istanbul.jpg');*/
+    background-image: url('images/istanbul.jpg');
 }
 /*#navigation > nav > * {*/
     /*width: 100%;*/

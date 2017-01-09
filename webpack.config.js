@@ -8,7 +8,7 @@ module.exports = {
         './src/index.js'
     ],
     output: {
-        path: path.join(__dirname, 'app'),
+        path: path.join(__dirname, 'dist'),
         filename: 'app-bundle.js'
     },
     module: {
@@ -20,8 +20,22 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loaders: [
+                    'style?sourceMap',
+                    'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
+                ]
             }
         ]
     }
 };
+
+
+
+
+
+
+
+
+
+// loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'),
+

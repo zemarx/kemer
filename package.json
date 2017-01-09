@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "webpack --progress --colors",
-    "start": "webpack-dev-server --inline --hot --content-base app/"
+    "start": "webpack-dev-server --inline --hot --content-base dist/"
   },
   "dependencies": {
     "radium": "^0.18.1",

@@ -5,7 +5,6 @@ import {Link as ReactRouterLink} from 'react-router'
 const Link = Radium(ReactRouterLink);
 
 const styles = {
-
     nav: {
         width: '70%',
         height: '100px',
