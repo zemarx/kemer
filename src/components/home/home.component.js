@@ -39,16 +39,16 @@ class HomeComponent extends React.Component {
 
     render () {
         return (
-            <div>
-                Suositut pizzat
+            <div id="fav_foods">
+                <h3>Suositut pizzat</h3>
                 <Favorite dishes={favorites.pizzas}/>
                 <br></br>{/* Temporary newlines*/}
                 <br></br>
-                Suositut kebab ateriat
+                <h3>Suositut kebab ateriat</h3>
                 <Favorite dishes={favorites.kebabs}/>
                 <br></br>
                 <br></br>
-                Suositut rullat
+                <h3>Suositut rullat</h3>
                 <Favorite dishes={favorites.rolls}/>
             </div>
         );

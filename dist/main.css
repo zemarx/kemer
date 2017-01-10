@@ -5,5 +5,18 @@ body {
     /*background-size: cover;*/
     /*background-image: url('images/istanbul.jpg');*/
 }
-
+#fav_foods {
+    text-align: center;
+}
+h3 {
+    color: #ff0000;
+    text-shadow: 1px 1px #000000;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.fav_pizzas {
+    color: red;
+    text-decoration: underline;
+}
 
