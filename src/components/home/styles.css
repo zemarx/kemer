@@ -1,0 +1,16 @@
+.fav_foods {
+    text-align: center;
+}
+
+.fav_header {
+    color: #ff0000;
+    text-shadow: 1px 1px #000000;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.fav_pizzas {
+    color: red;
+    text-decoration: underline;
+}

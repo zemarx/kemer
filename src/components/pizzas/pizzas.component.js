@@ -10,6 +10,7 @@ class PizzasComponent extends React.Component {
     render () {
         return (
             <div>
+                <h3>Holaaaaa</h3>
                 <ul>
                     {
                         pizzas.map((pizza) => {

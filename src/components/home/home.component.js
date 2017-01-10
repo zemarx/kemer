@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {favorites} from '../../data/database.js'
+import styles from './styles.css'
 
 class Favorite extends React.Component {
     constructor(props) {
@@ -39,16 +40,16 @@ class HomeComponent extends React.Component {
 
     render () {
         return (
-            <div id="fav_foods">
-                <h3>Suositut pizzat</h3>
+            <div className={styles.fav_foods}>
+                <h3 className={styles.fav_header}>Suositut pizzat</h3>
                 <Favorite dishes={favorites.pizzas}/>
                 <br></br>{/* Temporary newlines*/}
                 <br></br>
-                <h3>Suositut kebab ateriat</h3>
+                <h3 className={styles.fav_header}>Suositut kebab ateriat</h3>
                 <Favorite dishes={favorites.kebabs}/>
                 <br></br>
                 <br></br>
-                <h3>Suositut rullat</h3>
+                <h3 className={styles.fav_header}>Suositut rullat</h3>
                 <Favorite dishes={favorites.rolls}/>
             </div>
         );
