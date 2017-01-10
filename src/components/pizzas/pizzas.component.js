@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {pizzas} from '../../data/database.js'
+import styles from './styles.css'
 
 
 class PizzasComponent extends React.Component {
@@ -9,21 +10,25 @@ class PizzasComponent extends React.Component {
 
     render () {
         return (
-            <div>
-                <h3>Holaaaaa</h3>
-                <ul>
+            <div className={styles.main_wrapper}>
+                <table className={styles.pizza_list}>
+                    <tbody>
                     {
                         pizzas.map((pizza) => {
                             return (
-                                <li key={pizza.id}>
-                                    {pizza.name}
-                                    {pizza.ingredients.join(', ')}
-                                    {pizza.price_norm} / {pizza.price_big}
-                                </li>
+                                <tr key={pizza.id}>
+                                    <td>
+                                        <div className={styles.pizza_img}></div>
+                                        <div>{pizza.name}</div>
+                                    </td>
+                                    <td>{pizza.ingredients.join(', ')}</td>
+                                    <td>{pizza.price_norm} / {pizza.price_big}</td>
+                                </tr>
                             )
                         })
                     }
-                </ul>
+                    </tbody>
+                </table>
             </div>
         );
     }
