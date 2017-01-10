@@ -14,8 +14,7 @@ class Favorite extends React.Component {
         return (
             <div>
                 {
-                    this.state.dishes.map(function(dish) {
-
+                    this.state.dishes.map((dish) => {
                         let price = dish.price_norm;
                         if (dish.price_big) {
                             price += ' / ' + dish.price_big;

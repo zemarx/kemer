@@ -12,6 +12,7 @@ class App extends React.Component {
         return (
             <div>
                 <nav className={styles.nav}>
+                    <Link className={styles.link} to={'/'}>Pääsivu</Link>
                     <Link className={styles.link} to={'/pizzas'}>Pizzat</Link>
                     <Link className={styles.link} to={'/kebabs'}>Kebabit</Link>
                     <Link className={styles.link} to={'/salads'}>Salaatit</Link>
