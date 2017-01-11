@@ -2,12 +2,41 @@
     text-align: center;
 }
 
+.fav_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .fav_header {
     color: #ff0000;
     text-shadow: 1px 1px #F2FA05;
     font-size: 25px;
     text-transform: uppercase;
-    text-decoration: underline;
+}
+
+.fav_info {
+    height: 400px;
+}
+
+.fav_info > div {
+    margin-left: 50px;
+}
+
+.fav_info > div:nth-child(2) {
+    height:200px;
+    width: 200px;
+    background-size: cover;
+    background-image: url('http://pngimg.com/upload/pizza_PNG7151.png');
+}
+
+.fav_info > div:nth-child(3) {
+    height: 50px;
+    width: 200px;
+}
+
+.fav_info > div:nth-child(4) {
+    height: 40px;
+    width: 200px;
 }
 
 .fav_pizzas {

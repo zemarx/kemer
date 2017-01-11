@@ -13,7 +13,7 @@ class Favorite extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className={styles.fav_wrapper}>
                 {
                     this.state.dishes.map((dish) => {
                         let price = dish.price_norm;
@@ -22,8 +22,11 @@ class Favorite extends React.Component {
                         }
 
                         return (
-                            <div key={dish.id}>
-                                {dish.name} : {dish.ingredients.join(', ')} {price}
+                            <div className={styles.fav_info} key={dish.id}>
+                                <div>{dish.name}</div>
+                                <div></div>
+                                <div>{dish.ingredients.join(', ')}</div>
+                                <div>{price}</div>
                             </div>
                         )
                     })
@@ -42,15 +45,15 @@ class HomeComponent extends React.Component {
         return (
             <div className={styles.fav_foods}>
                 <h3 className={styles.fav_header}>Suositut pizzat</h3>
-                <p className={styles.fav_pizzas}><Favorite dishes={favorites.pizzas}/></p>
+                <Favorite dishes={favorites.pizzas}/>
                 <br></br>{/* Temporary newlines*/}
                 <br></br>
                 <h3 className={styles.fav_header}>Suositut kebab ateriat</h3>
-                <p className={styles.fav_kebabs}><Favorite dishes={favorites.kebabs}/></p>
+                <Favorite dishes={favorites.kebabs}/>
                 <br></br>
                 <br></br>
                 <h3 className={styles.fav_header}>Suositut rullat</h3>
-                <p className={styles.fav_rolls}><Favorite dishes={favorites.rolls}/></p>
+                <Favorite dishes={favorites.rolls}/>
             </div>
         );
     }
