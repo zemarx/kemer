@@ -42,15 +42,15 @@ class HomeComponent extends React.Component {
         return (
             <div className={styles.fav_foods}>
                 <h3 className={styles.fav_header}>Suositut pizzat</h3>
-                <Favorite dishes={favorites.pizzas}/>
+                <p className={styles.fav_pizzas}><Favorite dishes={favorites.pizzas}/></p>
                 <br></br>{/* Temporary newlines*/}
                 <br></br>
                 <h3 className={styles.fav_header}>Suositut kebab ateriat</h3>
-                <Favorite dishes={favorites.kebabs}/>
+                <p className={styles.fav_kebabs}><Favorite dishes={favorites.kebabs}/></p>
                 <br></br>
                 <br></br>
                 <h3 className={styles.fav_header}>Suositut rullat</h3>
-                <Favorite dishes={favorites.rolls}/>
+                <p className={styles.fav_rolls}><Favorite dishes={favorites.rolls}/></p>
             </div>
         );
     }

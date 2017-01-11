@@ -317,12 +317,112 @@
   ];
 
   export const kebabs = [
+      {
+          "id": "1",
+          "name": "PITA KEBAB",
+          "ingredients": [
+              "pitaleipä",
+              "kebabliha",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "7.00€"
+      },
+      {
+          "id": "2",
+          "name": "KEBAB AURAJUUSTOPERUNOILLA",
+          "ingredients": [
+              "kebabliha",
+              "salaatti",
+              "aurajuusto",
+              "perunat",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+
     {
-      "id": "",
-      "name": "",
-      "ingredients": "",
-      "price": ""
-    }
+        "id": "3",
+        "name": "KEBAB RANSKALAISET",
+        "ingredients": [
+            "kebabliha",
+            "salaatti",
+            "ranskalaiset",
+            "tomaatti",
+            "suolakurkku",
+            "jalopeno"
+        ],
+        "price_norm": "8.00€"
+    },
+      {
+          "id": "4",
+          "name": "KEBAB KERMA- TAI VALKOSIPULIPERUNOILLA",
+          "ingredients": [
+              "kebabliha",
+              "salaatti",
+              "perunat",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+      {
+          "id": "5",
+          "name": "KEBAB RIISILLÄ",
+          "ingredients": [
+              "kebabliha",
+              "salaatti",
+              "riisi",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+      {
+          "id": "6",
+          "name": "KEBAB SALAATTI",
+          "ingredients": [
+              "kebabliha",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+      {
+          "id": "7",
+          "name": "ISKENDER KEBAB",
+          "ingredients": [
+              "kebabliha",
+              "leipä",
+              "jogurtti",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+      {
+          "id": "8",
+          "name": "KEBAB LOHKOPERUNOILLA",
+          "ingredients": [
+              "kebabliha",
+              "salaatti",
+              "lohkoperunat",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      }
   ];
 
   export const rolls = [
