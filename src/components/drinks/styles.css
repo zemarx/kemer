@@ -12,10 +12,7 @@
 
 .drink_list > tbody > tr > td:nth-child(2){
     white-space: pre-wrap;
-}
-
-.drink_list > tbody > tr > td:nth-child(3){
-    padding-left: 20px;
+    font-size: 22px;
 }
 
 .drink_list{
@@ -23,25 +20,17 @@
 }
 
 .drink_img {
-    width: 50px;
-    height: 100px;
-    background-color: #ff823f;
-    border-radius: 50%;
+    width: 80px;
+    height: 270px;
+    /*background-color: #ff823f;*/
+    /*border-radius: 50%;*/
     margin-bottom: 10px;
+    background-size: cover;
+    background-image: url('http://www.sinebrychoff.fi/SiteCollectionImages/Uutiset/2013/Q3_2013/CC%20PlantBottle%20syvatty.png');
 }
 .drink_name {
-    /*color: #ff0000;*/
-    /*text-shadow: 1px 1px #F2FA05;*/
-    color: #ff0000;
-    font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
-    text-decoration: underline;
-}
-
-.drink_price {
-    font-size: 22px;
-    font-weight: bold;
 }
 
 

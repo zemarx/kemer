@@ -21,7 +21,7 @@ class DrinksComponent extends React.Component {
                                         <div className={styles.drink_img}></div>
                                         <div className={styles.drink_name}>{drink.name}</div>
                                     </td>
-                                    <td className={styles.drink_price}>{drink.price_norm} / {drink.price_big}</td>
+                                    <td>{drink.price_norm} / {drink.price_big}</td>
                                 </tr>
                             )
                         })
