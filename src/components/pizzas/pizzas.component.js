@@ -19,10 +19,10 @@ class PizzasComponent extends React.Component {
                                 <tr key={pizza.id}>
                                     <td>
                                         <div className={styles.pizza_img}></div>
-                                        <div>{pizza.name}</div>
+                                        <div className={styles.pizza_name}>{pizza.name}</div>
                                     </td>
-                                    <td>{pizza.ingredients.join(', ')}</td>
-                                    <td>{pizza.price_norm} / {pizza.price_big}</td>
+                                    <td className={styles.pizza_ingredients}>{pizza.ingredients.join(', ')}</td>
+                                    <td className={styles.pizza_price_norm}>{pizza.price_norm} / {pizza.price_big}</td>
                                 </tr>
                             )
                         })

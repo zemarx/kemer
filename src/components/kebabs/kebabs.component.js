@@ -19,10 +19,10 @@ class KebabsComponent extends React.Component {
                                 <tr key={kebab.id}>
                                     <td>
                                         <div className={styles.kebab_img}></div>
-                                        <div>{kebab.name}</div>
+                                        <div className={styles.kebab_name}>{kebab.name}</div>
                                     </td>
-                                    <td>{kebab.ingredients.join(', ')}</td>
-                                    <td>{kebab.price_norm}</td>
+                                    <td className={styles.kebab_ingredients}>{kebab.ingredients.join(', ')}</td>
+                                    <td className={styles.kebab_price_norm}>{kebab.price_norm}</td>
                                 </tr>
                             )
                         })

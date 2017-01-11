@@ -426,21 +426,96 @@
   ];
 
   export const rolls = [
-    {
-      "id": "",
-      "name": "",
-      "ingredients": "",
-      "price": ""
-    }
+      {
+          "id": "1",
+          "name": "RULLAKEBAB",
+          "ingredients": [
+              "kebabliha",
+              "leipä",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "7.50€"
+      },
+      {
+          "id": "2",
+          "name": "AURAJUUSTORULLAKEBAB",
+          "ingredients": [
+              "kebabliha",
+              "aurajuustoleipä",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+      {
+          "id": "3",
+          "name": "JUUSTORULLAKEBAB",
+          "ingredients": [
+              "kebabliha",
+              "juustoleipä",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      },
+      {
+          "id": "3",
+          "name": "KANARULLA",
+          "ingredients": [
+              "kana",
+              "leipä",
+              "salaatti",
+              "tomaatti",
+              "suolakurkku",
+              "jalopeno"
+          ],
+          "price_norm": "8.00€"
+      }
   ];
 
   export const drinks = [
-    {
-      "id": "",
-      "name": "",
-      "size": "",
-      "price": ""
-    }
+      {
+          "id": "1",
+          "name": "Coca Cola",
+          "price_norm": "2.50€",
+          "price_big": "4.00€"
+      },
+      {
+          "id": "2",
+          "name": "Coca Cola Zero",
+          "price_norm": "2.50€",
+          "price_big": "4.00€"
+      },
+      {
+          "id": "3",
+          "name": "Coca Cola light",
+          "price_norm": "2.50€",
+          "price_big": "4.00€"
+      },
+      {
+          "id": "4",
+          "name": "Fanta",
+          "price_norm": "2.50€",
+          "price_big": "4.00€"
+      },
+      {
+          "id": "5",
+          "name": "Sprite",
+          "price_norm": "2.50€",
+          "price_big": "4.00€"
+      },
+      {
+          "id": "6",
+          "name": "Muumi",
+          "price_norm": "2.50€"
+      }
   ];
 
   export let favorites = {
@@ -542,7 +617,7 @@
                   "suolakurkku",
                   "jalopeno"
               ],
-              "price_norm": "8.00€"
+              "price_norm": "7.50€"
           },
           {
               "id": "2",

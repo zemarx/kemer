@@ -3,33 +3,33 @@
     justify-content: center;
 }
 
-.kebab_list > tbody > tr > td:first-child {
+.drink_list > tbody > tr > td:first-child {
     padding-right: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.kebab_list > tbody > tr > td:nth-child(2){
+.drink_list > tbody > tr > td:nth-child(2){
     white-space: pre-wrap;
 }
 
-.kebab_list > tbody > tr > td:nth-child(3){
+.drink_list > tbody > tr > td:nth-child(3){
     padding-left: 20px;
 }
 
-.kebab_list{
+.drink_list{
     border-spacing: 0 20px;
 }
 
-.kebab_img {
-    width: 150px;
-    height: 150px;
+.drink_img {
+    width: 50px;
+    height: 100px;
     background-color: #ff823f;
     border-radius: 50%;
     margin-bottom: 10px;
 }
-.kebab_name {
+.drink_name {
     /*color: #ff0000;*/
     /*text-shadow: 1px 1px #F2FA05;*/
     color: #ff0000;
@@ -38,14 +38,10 @@
     text-transform: uppercase;
     text-decoration: underline;
 }
-.kebab_ingredients {
-    color: #000000;
-    margin-left: 30px;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.kebab_price_norm {
+
+.drink_price {
     font-size: 22px;
     font-weight: bold;
 }
+
+
