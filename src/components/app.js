@@ -15,7 +15,7 @@ class App extends React.Component {
                     <Link className={styles.link} to={'/'}>Pääsivu</Link>
                     <Link className={styles.link} to={'/pizzas'}>Pizzat</Link>
                     <Link className={styles.link} to={'/kebabs'}>Kebabit</Link>
-                    <Link className={styles.link} to={'/salads'}>Salaatit</Link>
+                    <Link className={styles.link} to={'/rolls'}>Rullat</Link>
                     <Link className={styles.link} to={'/drinks'}>Juomat</Link>
                     <Link className={styles.link} to={'/about'}>Yhteystiedot</Link>
                 </nav>

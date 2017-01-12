@@ -6,7 +6,7 @@ import AboutComponent from './components/about/about.component'
 import DrinksComponent from './components/drinks/drinks.component'
 import PizzasComponent from './components/pizzas/pizzas.component'
 import KebabsComponent from './components/kebabs/kebabs.component'
-import SaladsComponent from './components/salads/salads.component'
+import RollsComponent from './components/rolls/rolls.component'
 
 const ROUTES = {
     path: '/',
@@ -16,7 +16,7 @@ const ROUTES = {
         { path: 'about', component: AboutComponent },
         { path: 'pizzas', component: PizzasComponent },
         { path: 'kebabs', component: KebabsComponent },
-        { path: 'salads', component: SaladsComponent },
+        { path: 'rolls', component: RollsComponent },
         { path: 'drinks', component: DrinksComponent }
     ]
 };

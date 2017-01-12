@@ -466,7 +466,7 @@
           "price_norm": "8.00€"
       },
       {
-          "id": "3",
+          "id": "4",
           "name": "KANARULLA",
           "ingredients": [
               "kana",
