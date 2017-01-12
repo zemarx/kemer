@@ -19,7 +19,10 @@
 }
 
 .fav_info > div {
+    font-size: 20px;
     margin-left: 50px;
+    margin-bottom: 18px;
+
 }
 
 .fav_info > div:nth-child(2) {
@@ -31,12 +34,15 @@
 
 .fav_info > div:nth-child(3) {
     height: 50px;
-    width: 200px;
+    width: 220px;
+    margin-top: 20px;
 }
 
 .fav_info > div:nth-child(4) {
     height: 40px;
     width: 200px;
+    margin-top: 30px;
+    font-size: 22px;
 }
 
 .fav_pizzas {

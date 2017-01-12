@@ -627,7 +627,6 @@
                   "aurajuustoleipä",
                   "salaatti",
                   "tomaatti",
-                  "suolakurkku",
                   "jalopeno"
               ],
               "price_norm": "8.00€"

@@ -1,9 +1,21 @@
-.mydiv {
-    width: 500px;
-    height: 300px;
-    background-color: blue;
+.wrapper {
+    display: flex;
+    margin-left: 250px;
+    margin-top: 55px;
 }
 
-.mydiv:hover {
-    background-color: yellow;
+.contact > span {
+    margin-left: 20px;
+    font-size: 18px;
+}
+.openTime {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 55px;
+    font-size: 18px;
+}
+.openTime > span:first-child {
+    margin-bottom: 10px;
+    font-weight: bold;
 }

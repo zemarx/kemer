@@ -22,7 +22,7 @@ class RollsComponent extends React.Component {
                                         <div className={styles.roll_name}>{roll.id}. {roll.name}</div>
                                     </td>
                                     <td>{roll.ingredients.join(', ')}</td>
-                                    <td>Hinta<br></br>{roll.price_norm}</td>
+                                    <td><br></br>{roll.price_norm}</td>
                                 </tr>
                             )
                         })
