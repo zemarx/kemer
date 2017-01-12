@@ -4,7 +4,7 @@
 }
 
 .drink_list > tbody > tr > td:first-child {
-    padding-right: 60px;
+    padding-right: 85px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -6,6 +6,16 @@ import styles from './styles.css'
 class DrinksComponent extends React.Component {
     constructor(props) {
         super(props);
+
+        this.construct_price = this.construct_price.bind(this);
+    }
+
+    construct_price (drink) {
+        if (drink.price_big) {
+            return (<td>0.5L / 1.5L<br></br>{drink.price_norm} / {drink.price_big}</td>)
+        } else {
+            return (<td>0.5L<br></br>{drink.price_norm}</td>)
+        }
     }
 
     render () {
@@ -21,7 +31,7 @@ class DrinksComponent extends React.Component {
                                         <div className={styles.drink_img}></div>
                                         <div className={styles.drink_name}>{drink.name}</div>
                                     </td>
-                                    <td>{drink.price_norm} / {drink.price_big}</td>
+                                    {this.construct_price(drink)}
                                 </tr>
                             )
                         })

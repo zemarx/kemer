@@ -6,6 +6,16 @@ import styles from './styles.css'
 class PizzasComponent extends React.Component {
     constructor(props) {
         super(props);
+
+        this.construct_price = this.construct_price.bind(this);
+    }
+
+    construct_price (pizza) {
+        if (pizza.price_big) {
+            return (<td>Norm. / Iso<br></br>{pizza.price_norm} / {pizza.price_big}</td>)
+        } else {
+            return (<td>Norm.<br></br>{pizza.price_norm}</td>)
+        }
     }
 
     render () {
@@ -22,7 +32,7 @@ class PizzasComponent extends React.Component {
                                         <div className={styles.pizza_name}>{pizza.id}. {pizza.name}</div>
                                     </td>
                                     <td>{pizza.ingredients.join(', ')}</td>
-                                    <td>Norm. / Iso<br></br>{pizza.price_norm} / {pizza.price_big}</td>
+                                    {this.construct_price(pizza)}
                                 </tr>
                             )
                         })
