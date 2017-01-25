@@ -84,13 +84,13 @@ class TimeLeftComponent extends React.Component {
         let timeText = '';
 
         if (this.state.isOpen) {
-            timeText = `Sulkeutuu ${time} paasta`;
+            timeText = `Sulkeutuu ${time} päästä`;
         } else {
-            timeText = `Aukeamiseen viela: ${time}`;
+            timeText = `Aukeamiseen vielä: ${time}`;
         }
 
         return (
-            <div>
+            <div className={styles.showTimeText}>
                 {timeText}
             </div>
         );
@@ -110,7 +110,7 @@ class OpenTimeComponent extends React.Component {
                 <TimeLeftComponent/>
                 <br></br>
 
-                <span>Aukioloajat: </span>
+                <span className={styles.spanOpenTime}>Aukioloajat: </span>
                 <span>Ma: 11.00 - 21.00</span>
                 <span>Ti: 11.00 - 21.00</span>
                 <span>Ke: 11.00 - 21.00</span>
