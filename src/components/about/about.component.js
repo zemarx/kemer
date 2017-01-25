@@ -8,45 +8,14 @@ class TimeLeftComponent extends React.Component {
 
         let closeOpenTime = [
             {},
-            {openTime: null, closeTime: null},
-            {openTime: null, closeTime: null},
-            {openTime: null, closeTime: null},
-            {openTime: null, closeTime: null},
-            {openTime: null, closeTime: null},
-            {openTime: null, closeTime: null},
-            {openTime: null, closeTime: null}
+            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 22, minutes: 0, seconds: 0}},
+            {openTime: {hours: 12, minutes: 0, seconds: 0}, closeTime: {hours: 22, minutes: 0, seconds: 0}},
+            {openTime: {hours: 12, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
         ];
-
-        let customTime = new Date();
-        customTime.setMinutes(0);
-        customTime.setSeconds(0);
-        customTime.setHours(11);
-        customTime.setHours(21);
-
-        closeOpenTime[1].openTime = customTime;
-        closeOpenTime[1].closeTime = customTime;
-        closeOpenTime[2].openTime = customTime;
-        closeOpenTime[2].closeTime = customTime;
-        closeOpenTime[3].openTime = customTime;
-        closeOpenTime[3].closeTime = customTime;
-        closeOpenTime[4].openTime = customTime;
-        closeOpenTime[4].closeTime = customTime;
-
-        customTime.setHours(11);
-        closeOpenTime[5].openTime = customTime;
-        customTime.setHours(22);
-        closeOpenTime[5].closeTime = customTime;
-
-        customTime.setHours(12);
-        closeOpenTime[6].openTime = customTime;
-        customTime.setHours(22);
-        closeOpenTime[6].closeTime = customTime;
-
-        customTime.setHours(12);
-        closeOpenTime[7].openTime = customTime;
-        customTime.setHours(21);
-        closeOpenTime[7].closeTime = customTime;
-
 
         this.state = {
             time: new Date(),
@@ -63,9 +32,9 @@ class TimeLeftComponent extends React.Component {
                 let closeTime = this.state.closeOpenTime[newDate.getDay()]['closeTime'];
                 let differenceDate = new Date();
 
-                differenceDate.setHours(closeTime.getHours() - newDate.getHours());
-                differenceDate.setMinutes(closeTime.getMinutes() - newDate.getMinutes());
-                differenceDate.setSeconds(closeTime.getSeconds() - newDate.getSeconds());
+                differenceDate.setHours(closeTime.hours - newDate.getHours());
+                differenceDate.setMinutes(closeTime.minutes - newDate.getMinutes());
+                differenceDate.setSeconds(closeTime.seconds - newDate.getSeconds());
 
                 this.setState({
                     time: differenceDate
