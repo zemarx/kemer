@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact > span {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.openTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 10px;
+    /*border: solid 0.1em gold;*/
+}
+
+.openTime > *:nth-child(2) {
+    font-weight: bold;
+}
+
+.openTime > span {
+    margin-bottom: 5px;
+}
+
+.showTimeText {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.today {
+    padding: 6px 10px 6px 10px;
+    border-radius: 20px;
+    background-color: #ffbc00;
+}

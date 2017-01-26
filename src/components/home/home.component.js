@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {favorites} from '../../data/database.js'
-import styles from './styles.css'
+import styles from './home.component.css'
 
 class Favorite extends React.Component {
     constructor(props) {

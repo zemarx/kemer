@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {kebabs} from '../../data/database.js'
-import styles from './styles.css'
+import styles from './kebabs.component.css'
 
 
 class KebabsComponent extends React.Component {

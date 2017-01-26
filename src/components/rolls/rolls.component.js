@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {rolls} from '../../data/database.js'
-import styles from './styles.css'
+import styles from './rolls.component.css'
 
 
 class RollsComponent extends React.Component {

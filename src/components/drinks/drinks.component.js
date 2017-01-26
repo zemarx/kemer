@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {drinks} from '../../data/database.js'
-import styles from './styles.css'
+import styles from './drinks.component.css'
 
 
 class DrinksComponent extends React.Component {
