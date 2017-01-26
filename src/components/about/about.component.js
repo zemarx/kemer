@@ -8,13 +8,13 @@ class TimeLeftComponent extends React.Component {
 
         let closeOpenTime = [
             {},
-            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
-            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
-            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
-            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
-            {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 22, minutes: 0, seconds: 0}},
-            {openTime: {hours: 12, minutes: 0, seconds: 0}, closeTime: {hours: 22, minutes: 0, seconds: 0}},
-            {openTime: {hours: 12, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 22, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 12, minutes: 0, seconds: 0}, timeToClose: {hours: 22, minutes: 0, seconds: 0}},
+            {timeToOpen: {hours: 12, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
         ];
 
         this.state = {
@@ -25,20 +25,34 @@ class TimeLeftComponent extends React.Component {
         };
     }
 
+    computeTimeDifference (isOpen) {
+        let newDate = new Date();
+        let time = this.state.closeOpenTime[newDate.getDay()][isOpen ? 'timeToClose' : 'timeToOpen'];
+        let differenceDate = new Date();
+
+        differenceDate.setHours(time.hours - newDate.getHours());
+        differenceDate.setMinutes(time.minutes - newDate.getMinutes());
+        differenceDate.setSeconds(time.seconds - newDate.getSeconds());
+
+        this.setState({
+            time: differenceDate
+        })
+    }
+
     componentDidMount () {
         this.setState({
             interval: setInterval(() => {
                 let newDate = new Date();
-                let closeTime = this.state.closeOpenTime[newDate.getDay()]['closeTime'];
-                let differenceDate = new Date();
+                let timeToOpen = this.state.closeOpenTime[newDate.getDay()]['timeToOpen'];
+                let timeToClose = this.state.closeOpenTime[newDate.getDay()]['timeToClose'];
 
-                differenceDate.setHours(closeTime.hours - newDate.getHours());
-                differenceDate.setMinutes(closeTime.minutes - newDate.getMinutes());
-                differenceDate.setSeconds(closeTime.seconds - newDate.getSeconds());
+                if (newDate.getHours() < timeToClose && newDate.getHours() > timeToOpen) {
+                    this.setState({ isOpen: true })
+                } else {
+                    this.setState({ isOpen: false })
+                }
 
-                this.setState({
-                    time: differenceDate
-                })
+                this.computeTimeDifference(this.state.isOpen);
             }, 1000)
         })
     }
