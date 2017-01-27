@@ -23,6 +23,8 @@ class TimeLeftComponent extends React.Component {
             isOpen: true,
             interval: null
         };
+
+        this.formatNumber = this.formatNumber.bind(this);
     }
 
     computeTimeDifference (isOpen) {
@@ -63,9 +65,17 @@ class TimeLeftComponent extends React.Component {
         clearInterval(this.state.interval);
     }
 
+    formatNumber(number) {
+        number = number + "";
+        if (number.length == 1) return "0" + number;
+        return number
+    }
+
     render () {
         let currentTime = this.state.time;
-        let time = `${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`;
+        let time = this.formatNumber(currentTime.getHours()) + ":";
+        time += this.formatNumber(currentTime.getMinutes()) + ":";
+        time += this.formatNumber(currentTime.getSeconds());
         let timeText = '';
 
         if (this.state.isOpen) {
