@@ -48,7 +48,9 @@ class TimeLeftComponent extends React.Component {
 
                 if (newDate.getHours() < timeToClose && newDate.getHours() > timeToOpen) {
                     this.setState({ isOpen: true })
-                } else {
+                }
+
+                if (newDate.getHours() > timeToClose && newDate.getHours() < timeToOpen) {
                     this.setState({ isOpen: false })
                 }
 
