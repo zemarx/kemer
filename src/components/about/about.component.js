@@ -1,92 +1,89 @@
 import * as React from 'react'
 import styles from './about.component.css'
 
+const openCloseTime = [
+    {},
+    {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+    {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+    {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+    {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+    {openTime: {hours: 11, minutes: 0, seconds: 0}, closeTime: {hours: 22, minutes: 0, seconds: 0}},
+    {openTime: {hours: 12, minutes: 0, seconds: 0}, closeTime: {hours: 22, minutes: 0, seconds: 0}},
+    {openTime: {hours: 12, minutes: 0, seconds: 0}, closeTime: {hours: 21, minutes: 0, seconds: 0}},
+];
+
+const formatNumber = (number) => {
+    number = number + "";
+    if (number.length == 1) return "0" + number;
+    return number
+}
+
+const computeTimeToClose = (closeTime, currentTime) => {
+    currentTime.setHours(closeTime.hours - currentTime.getHours());
+    currentTime.setMinutes(59 - currentTime.getMinutes());
+    currentTime.setSeconds(59 - currentTime.getSeconds());
+    
+    return currentTime;
+}
+
+const computeTimeToOpen = () => {
+
+}
+
 
 class TimeLeftComponent extends React.Component {
     constructor(props) {
         super(props);
 
-        let closeOpenTime = [
-            {},
-            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
-            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
-            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
-            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
-            {timeToOpen: {hours: 11, minutes: 0, seconds: 0}, timeToClose: {hours: 22, minutes: 0, seconds: 0}},
-            {timeToOpen: {hours: 12, minutes: 0, seconds: 0}, timeToClose: {hours: 22, minutes: 0, seconds: 0}},
-            {timeToOpen: {hours: 12, minutes: 0, seconds: 0}, timeToClose: {hours: 21, minutes: 0, seconds: 0}},
-        ];
-
         this.state = {
             time: new Date(),
-            closeOpenTime: closeOpenTime,
             isOpen: true,
-            interval: null
+            updateTimeLeftInterval: null,
+            checkOpenClosedInterval: null
         };
-
-        this.formatNumber = this.formatNumber.bind(this);
-    }
-
-    computeTimeDifference (isOpen) {
-        let newDate = new Date();
-        let time = this.state.closeOpenTime[newDate.getDay()][isOpen ? 'timeToClose' : 'timeToOpen'];
-        let differenceDate = new Date();
-
-        differenceDate.setHours(time.hours - newDate.getHours());
-        differenceDate.setMinutes(time.minutes - newDate.getMinutes());
-        differenceDate.setSeconds(time.seconds - newDate.getSeconds());
-
-        this.setState({
-            time: differenceDate
-        })
     }
 
     componentDidMount () {
         this.setState({
-            interval: setInterval(() => {
-                let newDate = new Date();
-                let timeToOpen = this.state.closeOpenTime[newDate.getDay()]['timeToOpen'];
-                let timeToClose = this.state.closeOpenTime[newDate.getDay()]['timeToClose'];
+            updateTimeLeftInterval: setInterval(() => {
+                let currentTime = new Date();
+                let openTime = openCloseTime[currentTime.getDay()]['openTime'];
+                let closeTime = openCloseTime[currentTime.getDay()]['closeTime'];
 
-                if (newDate.getHours() < timeToClose && newDate.getHours() > timeToOpen) {
-                    this.setState({ isOpen: true })
+                if (this.state.isOpen) {
+                    this.setState({ time: computeTimeToClose(closeTime, currentTime) })
+                } else if (!this.state.isOpen) {
+                    this.setState({ time: computeTimeToOpen(openTime, currentTime) })
                 }
+            }, 1000), 
+            checkOpenClosedInterval: setInterval(() => {
+                // console.log('Checking if pizzeria is open');
+                let currentDate = new Date();
+                let openTime = openCloseTime[currentDate.getDay()]['openTime'];
+                let closeTime = openCloseTime[currentDate.getDay()]['closeTime'];
 
-                else {
-                    this.setState({ isOpen: false })
+                let hoursNow = currentDate.getHours();
+
+                if (hoursNow > openTime.hours && hoursNow < closeTime.hours) {
+                    this.setState({ isOpen: true });
+                } else {
+                    this.setState({ isOpen: false });
                 }
-
-                this.computeTimeDifference(this.state.isOpen);
-            }, 1000)
+            }, 1000) // TODO: set to 60000, so it doesn't check it too often without a reason.
         })
     }
 
     componentWillUnmount () {
-        clearInterval(this.state.interval);
-    }
-
-    formatNumber(number) {
-        number = number + "";
-        if (number.length == 1) return "0" + number;
-        return number
+        clearInterval(this.state.updateTimeLeftInterval);
+        clearInterval(this.state.checkOpenClosedInterval);
     }
 
     render () {
-        let currentTime = this.state.time;
-        let time = this.formatNumber(currentTime.getHours()) + ":";
-        time += this.formatNumber(currentTime.getMinutes()) + ":";
-        time += this.formatNumber(currentTime.getSeconds());
-        let timeText = '';
-
-        if (this.state.isOpen) {
-            timeText = `Sulkeutuu ${time} päästä`;
-        } else {
-            timeText = `Aukeamiseen vielä: ${time}`;
-        }
+        let time = (this.state.isOpen) ? `Sulkeutuu ${this.state.time} päästä` : `Aukeamiseen vielä: ${this.state.time}`
 
         return (
             <div className={styles.showTimeText}>
-                {timeText}
+                {time}
             </div>
         );
     }

@@ -38,13 +38,11 @@
     border-radius: 50%;
     margin-bottom: 10px;
     background-size: cover;
-    background-image:url('http://pngimg.com/upload/pizza_PNG7151.png');
+    background-color: #ff9206;
+    /*background-image:url('http://pngimg.com/upload/pizza_PNG7151.png');*/
 }
 
 .pizza_name {
     font-size: 20px;
     text-transform: uppercase;
 }
-
-
-
