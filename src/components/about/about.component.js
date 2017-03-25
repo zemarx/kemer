@@ -1,4 +1,5 @@
 import * as React from 'react'
+import ContactForm from './../contactForm/contactForm.component';
 import styles from './about.component.css'
 
 const openCloseTime = [
@@ -131,6 +132,10 @@ class AboutComponent extends React.Component {
                     <span>77600 SUONENJOKI</span>
                     <OpenTimeComponent/>
                 </div>
+
+
+                <ContactForm />
+
             </div>
         );
     }
